@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Spade — Get clear. Reconnect to your personal power.</title>
+  <meta name="description" content="Sam guides entrepreneurs, creators, and seekers through the inner blocks that keep their goals stuck in possibility — so they can return to grounded action, trust, and follow-through." />
+
+  <!-- Open Graph / link preview -->
+  <meta property="og:title" content="Sam Spade — Personal Power Sessions" />
+  <meta property="og:description" content="Get clear. Reconnect to your personal power. Move your true goal into form." />
+  <meta property="og:type" content="website" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#FBF8F3',
+            sand: '#F3EEE5',
+            ink: '#2A2723',
+            muted: '#6B635A',
+            hairline: '#E6DFD3',
+            bronze: {
+              DEFAULT: '#8B5A2B',
+              light: '#C28A4A',
+            },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #FBF8F3; color: #2A2723; }
+
+    .hero-gradient {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(194, 138, 74, 0.18), transparent 65%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(139, 90, 43, 0.08), transparent 70%),
+        #FBF8F3;
+    }
+
+    .geo-mark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      opacity: 0.06;
+      z-index: 0;
+    }
+
+    .cta-bronze {
+      background: linear-gradient(135deg, #8B5A2B 0%, #C28A4A 100%);
+      color: #FBF8F3;
+      box-shadow: 0 1px 2px rgba(42, 39, 35, 0.08), 0 8px 24px -8px rgba(139, 90, 43, 0.35);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .cta-bronze:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(42, 39, 35, 0.1), 0 14px 32px -10px rgba(139, 90, 43, 0.45);
+    }
+
+    .accent-rule {
+      display: inline-block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #8B5A2B, #C28A4A);
+      border-radius: 999px;
+    }
+
+    .stage-card {
+      background: #FBF8F3;
+      border: 1px solid #E6DFD3;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+    .stage-card:hover {
+      transform: translateY(-2px);
+      border-color: #C28A4A;
+      box-shadow: 0 10px 30px -16px rgba(139, 90, 43, 0.25);
+    }
+
+    .stage-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #C28A4A;
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+
+    /* Numbered list circles */
+    .step-num {
+      flex-shrink: 0;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #8B5A2B 0%, #C28A4A 100%);
+      color: #FBF8F3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    /* Pill bullet */
+    .bullet-dot {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      margin-top: 0.7rem;
+      background: #C28A4A;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-ink">
+
+  <!--
+    ─────────────────────────────────────────────────────────────────────
+    PLACEHOLDERS TO REPLACE BEFORE LAUNCH (search for these strings):
+      - href="#book"                → Sam's real booking/checkout URL
+      - hello@samspade.example      → Sam's real contact email
+    Stage card names ("The Block", "The Clearing", "The Reconnection",
+    "The Embodiment") are WORKING PLACEHOLDERS — confirm with Sam.
+    Brand photos live at: assets/sam-hero.png and assets/sam-about.png
+    ─────────────────────────────────────────────────────────────────────
+  -->
+
+  <!-- ─── Nav ───────────────────────────────────────────────── -->
+  <header class="absolute top-0 left-0 right-0 z-20">
+    <nav class="max-w-6xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+      <a href="#" class="font-serif text-xl tracking-wide text-ink">Sam Spade</a>
+      <a href="#book"
+         class="hidden sm:inline-flex items-center text-sm font-medium text-ink hover:text-bronze transition-colors">
+        Book a Session
+        <span class="ml-1.5">→</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ─── Hero ──────────────────────────────────────────────── -->
+  <section class="hero-gradient relative overflow-hidden pt-24 pb-20 sm:pt-32 sm:pb-28 lg:pt-36 lg:pb-32">
+    <!-- Faint geometric mark, only visible behind text column on desktop -->
+    <div class="geo-mark hidden lg:flex lg:!opacity-[0.045]" aria-hidden="true" style="justify-content:flex-start; padding-left:8%;">
+      <svg viewBox="0 0 400 400" class="w-[520px] h-auto" fill="none" stroke="#8B5A2B" stroke-width="0.6">
+        <circle cx="200" cy="200" r="120" />
+        <circle cx="200" cy="140" r="120" />
+        <circle cx="200" cy="260" r="120" />
+        <circle cx="148" cy="170" r="120" />
+        <circle cx="252" cy="170" r="120" />
+        <circle cx="148" cy="230" r="120" />
+        <circle cx="252" cy="230" r="120" />
+      </svg>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+        <!-- Text column -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <p class="text-xs sm:text-sm tracking-[0.22em] uppercase text-muted mb-6">Personal Power Sessions</p>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-7xl leading-[1.05] tracking-tight text-ink">
+            Get clear.<br/>
+            Reconnect to your personal power.<br/>
+            <span class="italic text-bronze">Move your true goal into form.</span>
+          </h1>
+          <p class="mt-8 text-lg sm:text-xl text-muted leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Sam guides entrepreneurs, creators, and seekers through the inner blocks that keep their goals stuck in possibility — so they can return to grounded action, trust, and follow-through.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 sm:gap-6">
+            <a href="#book"
+               class="cta-bronze inline-flex items-center justify-center px-7 py-4 rounded-2xl text-base font-medium tracking-wide">
+              Book a Personal Power Session
+            </a>
+            <a href="#process"
+               class="inline-flex items-center text-ink hover:text-bronze transition-colors text-base font-medium">
+              See how the process works
+              <span class="ml-1.5">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portrait column -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-sm lg:max-w-none">
+            <!-- soft bronze wash behind portrait -->
+            <div class="absolute -inset-3 sm:-inset-4 rounded-[2rem] -z-10"
+                 style="background: radial-gradient(ellipse 80% 80% at 60% 40%, rgba(194,138,74,0.22), rgba(194,138,74,0) 70%);"
+                 aria-hidden="true"></div>
+            <img src="assets/sam-hero.png"
+                 alt="Sam Spade by the lake at golden hour"
+                 class="relative w-full h-auto rounded-[1.75rem] border border-hairline shadow-[0_20px_60px_-24px_rgba(42,39,35,0.25)] object-cover"
+                 loading="eager"
+                 fetchpriority="high" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── The Stuck Pattern ─────────────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <div class="mb-10">
+        <span class="accent-rule"></span>
+        <p class="mt-4 text-xs sm:text-sm tracking-[0.22em] uppercase text-muted">If you're here, you probably know this already</p>
+      </div>
+      <ul class="space-y-5 text-lg sm:text-xl leading-relaxed text-ink">
+        <li class="flex items-start gap-4">
+          <span class="bullet-dot"></span>
+          <span>You know the next level is available, but you keep circling it.</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="bullet-dot"></span>
+          <span>Your mind keeps analyzing while your body doesn't feel ready.</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="bullet-dot"></span>
+          <span>You start with fire, then drift, avoid, or overthink.</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="bullet-dot"></span>
+          <span>The strategy may be right, but the internal pattern keeps hijacking execution.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── What Sam Does ─────────────────────────────────────── -->
+  <section id="process" class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        What Sam does
+      </h2>
+      <p class="mt-8 text-lg sm:text-xl leading-relaxed text-ink">
+        Sam helps you locate the block underneath the pattern, reconnect to the part of you that already knows the way forward, and integrate that awareness into practical next action.
+      </p>
+      <p class="mt-6 text-lg sm:text-xl leading-relaxed text-muted">
+        This isn't about labeling you. It's about orienting you — so the next step feels obvious instead of forced.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── Reserved hook for intake/reflection (Phase 2) ─────── -->
+  <!-- <section id="reflect"></section> -->
+
+  <!-- ─── The Stage Map ─────────────────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="max-w-3xl mb-12">
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+          A simple map of the work
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed text-muted">
+          The work moves through four stages. Most people recognize themselves in one of them the moment they read it. The map isn't a label — it's an orientation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <!-- Stage 1 -->
+        <article id="stage-block" class="stage-card rounded-2xl p-7">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="stage-num">01</span>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+          </div>
+          <h3 class="font-serif text-2xl text-ink mb-3">The Block</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            Where the pattern becomes visible — the place you keep circling, even when you know better.
+          </p>
+          <p class="text-sm text-ink leading-relaxed">
+            <span class="text-bronze font-medium">What helps now:</span> seeing it clearly, without judgment.
+          </p>
+        </article>
+
+        <!-- Stage 2 -->
+        <article id="stage-clearing" class="stage-card rounded-2xl p-7">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="stage-num">02</span>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+          </div>
+          <h3 class="font-serif text-2xl text-ink mb-3">The Clearing</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            Where the root cause and the emotional charge underneath it begin to release.
+          </p>
+          <p class="text-sm text-ink leading-relaxed">
+            <span class="text-bronze font-medium">What helps now:</span> presence, not pressure.
+          </p>
+        </article>
+
+        <!-- Stage 3 -->
+        <article id="stage-reconnection" class="stage-card rounded-2xl p-7">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="stage-num">03</span>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+          </div>
+          <h3 class="font-serif text-2xl text-ink mb-3">The Reconnection</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            Where personal power and inner knowing return — and the next step starts to feel obvious.
+          </p>
+          <p class="text-sm text-ink leading-relaxed">
+            <span class="text-bronze font-medium">What helps now:</span> trusting what you're hearing.
+          </p>
+        </article>
+
+        <!-- Stage 4 -->
+        <article id="stage-embodiment" class="stage-card rounded-2xl p-7">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="stage-num">04</span>
+            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+          </div>
+          <h3 class="font-serif text-2xl text-ink mb-3">The Embodiment</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            Where aligned action and follow-through become available — and the goal moves into form.
+          </p>
+          <p class="text-sm text-ink leading-relaxed">
+            <span class="text-bronze font-medium">What helps now:</span> showing up, one grounded step at a time.
+          </p>
+        </article>
+      </div>
+
+      <p class="mt-8 text-sm italic text-muted">Working names — Sam may refine these.</p>
+    </div>
+  </section>
+
+  <!-- ─── What Happens In A Session ─────────────────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        What happens in a session
+      </h2>
+      <ol class="mt-10 space-y-7">
+        <li class="flex items-start gap-5">
+          <span class="step-num">1</span>
+          <p class="text-lg leading-relaxed text-ink pt-1">
+            You arrive with a goal, pattern, or place where you feel stuck.
+          </p>
+        </li>
+        <li class="flex items-start gap-5">
+          <span class="step-num">2</span>
+          <p class="text-lg leading-relaxed text-ink pt-1">
+            Sam helps identify the block beneath the surface.
+          </p>
+        </li>
+        <li class="flex items-start gap-5">
+          <span class="step-num">3</span>
+          <p class="text-lg leading-relaxed text-ink pt-1">
+            The session guides you through awareness, release, and reconnection.
+          </p>
+        </li>
+        <li class="flex items-start gap-5">
+          <span class="step-num">4</span>
+          <p class="text-lg leading-relaxed text-ink pt-1">
+            You leave with a clearer sense of what is shifting and what to practice next.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─── How To Prepare + After The Session (side by side on desktop) ─── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+      <div>
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl leading-tight text-ink">
+          How to prepare
+        </h2>
+        <ul class="mt-8 space-y-4 text-lg leading-relaxed">
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Be in a quiet, private space.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Have water nearby.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>No driving or multitasking.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Leave a few minutes after to integrate.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Come open — there's nothing to perform.</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl leading-tight text-ink">
+          After the session
+        </h2>
+        <ul class="mt-8 space-y-4 text-lg leading-relaxed">
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>You may feel tired or want quiet — that's the work integrating.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>New insights often arrive in the hours and days after.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Old patterns become easier to notice and choose differently around.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Many people feel lighter or more spacious.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Rest, water, grounding, journaling, or a walk all help.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── About Sam ─────────────────────────────────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-[240px_1fr] gap-10 md:gap-14 items-center">
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-[1.6rem] -z-10"
+             style="background: radial-gradient(ellipse 80% 80% at 50% 40%, rgba(194,138,74,0.18), rgba(194,138,74,0) 70%);"
+             aria-hidden="true"></div>
+        <img src="assets/sam-about.png"
+             alt="Sam Spade in his studio"
+             class="relative rounded-2xl w-full max-w-[240px] aspect-square object-cover border border-hairline shadow-[0_14px_40px_-20px_rgba(42,39,35,0.25)]" />
+      </div>
+      <div>
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl leading-tight text-ink">
+          About Sam
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed text-ink">
+          Sam works with people who are serious about change. He helps them find the root pattern underneath what's stuck and reconnect to the inner knowing that already has the answer.
+        </p>
+        <p class="mt-5 text-lg leading-relaxed text-muted">
+          His work is grounded in spiritual practice, personal power, and practical movement. Clients describe him as a laser — direct, warm, and precise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserved hook for testimonials (Phase 2) -->
+  <!-- <section id="testimonials"></section> -->
+  <!-- Reserved hook for deeper-journey/Anatomy of a Miracle (Phase 2) -->
+  <!-- <section id="deeper-journey"></section> -->
+
+  <!-- ─── Final CTA ─────────────────────────────────────────── -->
+  <section id="book" class="py-24 sm:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10"
+         style="background:
+           radial-gradient(ellipse 70% 50% at 50% 50%, rgba(194, 138, 74, 0.18), transparent 70%),
+           #FBF8F3;"></div>
+
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+      <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-ink">
+        Ready to move <span class="italic text-bronze">what's been stuck?</span>
+      </h2>
+      <p class="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-xl mx-auto">
+        One session can change how the rest of the path feels.
+      </p>
+      <div class="mt-10">
+        <a href="#book"
+           class="cta-bronze inline-flex items-center justify-center px-8 py-4 rounded-2xl text-base font-medium tracking-wide">
+          Book a Personal Power Session
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="border-t border-hairline py-10">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-base text-ink">Sam Spade</p>
+      <div class="flex items-center gap-6 text-sm text-muted">
+        <a href="mailto:hello@samspade.example" class="hover:text-bronze transition-colors">hello@samspade.example</a>
+        <span>© <script>document.write(new Date().getFullYear())</script></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

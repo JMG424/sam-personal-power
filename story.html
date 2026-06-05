@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abigail's Light — Samuel Spade</title>
+  <meta name="description" content="The story behind the work — how Sam was sent back, what Abigail taught him, and the lineage of light he carries forward." />
+
+  <meta property="og:title" content="Abigail's Light — Samuel Spade" />
+  <meta property="og:description" content="There are moments that stop time. For Samuel Spade, it was a heart attack." />
+  <meta property="og:type" content="article" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#FBF8F3',
+            sand: '#F3EEE5',
+            ink: '#2A2723',
+            muted: '#6B635A',
+            hairline: '#E6DFD3',
+            bronze: { DEFAULT: '#8B5A2B', light: '#C28A4A' },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #FBF8F3; color: #2A2723; }
+
+    .cta-bronze {
+      background: linear-gradient(135deg, #8B5A2B 0%, #C28A4A 100%);
+      color: #FBF8F3;
+      box-shadow: 0 1px 2px rgba(42, 39, 35, 0.08), 0 8px 24px -8px rgba(139, 90, 43, 0.35);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .cta-bronze:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(42, 39, 35, 0.1), 0 14px 32px -10px rgba(139, 90, 43, 0.45);
+    }
+
+    .accent-rule {
+      display: inline-block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #8B5A2B, #C28A4A);
+      border-radius: 999px;
+    }
+
+    .pull {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+    }
+
+    /* Lineage line */
+    .lineage::before {
+      content: '';
+      position: absolute;
+      left: 27px; top: 12px; bottom: 12px;
+      width: 1px;
+      background: linear-gradient(180deg, #C28A4A 0%, #E6DFD3 100%);
+    }
+
+    .l-node {
+      flex-shrink: 0;
+      width: 56px; height: 56px;
+      border-radius: 9999px;
+      border: 1px solid #E6DFD3;
+      background: #FBF8F3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 6px 18px -10px rgba(139, 90, 43, 0.25);
+      position: relative;
+      z-index: 1;
+    }
+
+    .l-node.is-sam {
+      border: 2px solid #C28A4A;
+      background: linear-gradient(135deg, rgba(194,138,74,0.18), rgba(194,138,74,0.05));
+      box-shadow: 0 0 0 6px rgba(194,138,74,0.08), 0 10px 26px -10px rgba(139,90,43,0.4);
+    }
+
+    .candle-glow {
+      filter: drop-shadow(0 0 30px rgba(194, 138, 74, 0.45));
+    }
+
+    .pillar {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: 0.16em;
+      font-weight: 500;
+    }
+
+    .tag {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      color: #8B5A2B;
+      border: 1px solid rgba(194,138,74,0.35);
+      background: rgba(194,138,74,0.04);
+      padding: 4px 14px;
+      border-radius: 9999px;
+    }
+
+    .quote-mark::before {
+      content: '“';
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: rgba(194,138,74,0.35);
+      display: block;
+      margin-bottom: -0.4rem;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-ink">
+
+  <!-- ─── Nav ───────────────────────────────────────────────── -->
+  <header class="absolute top-0 left-0 right-0 z-20">
+    <nav class="max-w-6xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+      <a href="index.html" class="font-serif text-xl tracking-wide text-ink inline-flex items-center gap-2 hover:text-bronze transition-colors">
+        <span class="text-bronze">←</span> Sam Spade
+      </a>
+      <a href="index.html#book"
+         class="hidden sm:inline-flex items-center text-sm font-medium text-ink hover:text-bronze transition-colors">
+        Book a Session
+        <span class="ml-1.5">→</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ─── Hero ──────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32"
+           style="background:
+             radial-gradient(ellipse 65% 50% at 50% 0%, rgba(194,138,74,0.22), transparent 70%),
+             radial-gradient(ellipse 50% 40% at 70% 90%, rgba(139,90,43,0.06), transparent 70%),
+             #FBF8F3;">
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-10 text-center">
+
+      <!-- Candle / flame mark -->
+      <svg viewBox="0 0 64 84" class="mx-auto mb-8 w-12 h-auto candle-glow" fill="none" aria-hidden="true">
+        <!-- Flame -->
+        <path d="M32 6 C 38 16, 44 22, 44 32 C 44 40, 38 44, 32 44 C 26 44, 20 40, 20 32 C 20 22, 26 16, 32 6 Z"
+              fill="#C28A4A" stroke="#8B5A2B" stroke-width="0.6" />
+        <!-- Inner flame -->
+        <path d="M32 14 C 35 20, 38 24, 38 30 C 38 35, 35 38, 32 38 C 29 38, 26 35, 26 30 C 26 24, 29 20, 32 14 Z"
+              fill="#FBF8F3" opacity="0.85" />
+        <!-- Candle body -->
+        <rect x="29" y="46" width="6" height="32" fill="#E6DFD3" stroke="#8B5A2B" stroke-width="0.4" />
+        <line x1="22" y1="78" x2="42" y2="78" stroke="#8B5A2B" stroke-width="0.4" />
+      </svg>
+
+      <p class="text-xs sm:text-sm tracking-[0.32em] uppercase text-bronze mb-6 font-medium">The Story</p>
+
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-ink">
+        Abigail's <span class="italic text-bronze">Light</span>
+      </h1>
+
+      <p class="mt-8 text-lg sm:text-xl pull italic text-muted leading-relaxed max-w-xl mx-auto">
+        The story behind the work — how Sam was sent back, what Abigail taught him, and the lineage he carries forward.
+      </p>
+
+      <!-- Divider -->
+      <div class="mt-12 flex items-center justify-center gap-4 text-bronze/60">
+        <span class="block h-px w-16 bg-gradient-to-r from-transparent to-bronze-light"></span>
+        <span class="text-xs tracking-[0.3em]">✦</span>
+        <span class="block h-px w-16 bg-gradient-to-l from-transparent to-bronze-light"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── The Story ─────────────────────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-2xl mx-auto px-6 lg:px-10">
+
+      <div class="space-y-6 text-lg sm:text-xl leading-[1.85] text-ink">
+        <p class="font-serif italic text-2xl sm:text-3xl text-bronze text-center my-4">There are moments that stop time.</p>
+
+        <p>For Samuel Spade, it was a heart attack.</p>
+
+        <p>In that space between here and gone, something cracked open. It wasn't an ending — it was an <em class="text-bronze not-italic font-medium">initiation</em>. A divine summons to a path that had been waiting his entire life. In that stillness, the light didn't just visit. <em class="text-bronze italic">It stayed.</em></p>
+
+        <p>One year before, his mentor <span class="text-bronze font-medium">Abigail</span> had given him one of the greatest gifts a soul can receive: she taught him how to <em>channel without being consumed.</em> How to hold the light — the love, the gratitude, the joy — without losing himself in it.</p>
+
+        <p>The channel must be tended with care. Abigail taught him that holding the light is both a gift and a responsibility — to stay grounded, clear, and rooted in <span class="font-medium">Love, Gratitude &amp; Joy</span>, so that what flows through remains pure, and every soul that enters this space is held safely in the light.</p>
+
+        <p>Carrying an unbroken lineage of light — and trained in the transformational tools of the <span class="font-medium">Compassion Key</span> by Edward Mannix — Samuel now does what he was sent back to do.</p>
+      </div>
+
+      <!-- Pull quote -->
+      <figure class="my-16">
+        <blockquote class="pull italic text-2xl sm:text-3xl text-bronze leading-snug text-center max-w-xl mx-auto">
+          <span class="quote-mark"></span>
+          She taught me how to hold the light without losing myself.<br/>
+          Now I teach you.
+        </blockquote>
+      </figure>
+
+      <div class="space-y-6 text-lg sm:text-xl leading-[1.85] text-ink">
+        <p>He helps souls clear their <span class="text-bronze font-medium">blockages</span> — the patterns that have kept them from the life they came here to live — connecting them to their higher self so the light can move freely. <em>As above, so below.</em> From the infinite to you. From you back to the infinite.</p>
+
+        <p class="font-serif text-2xl sm:text-3xl italic text-ink text-center pt-6">
+          You don't need a heart attack to wake up.<br/>
+          <span class="text-bronze">You just need a guide.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── The Principle ─────────────────────────────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        The Principle
+      </h2>
+
+      <div class="mt-14 inline-block px-8 sm:px-16 py-12 rounded-2xl border border-hairline relative"
+           style="background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(194,138,74,0.12), transparent 70%), #FBF8F3;">
+        <p class="pillar text-2xl sm:text-3xl text-bronze">As Above</p>
+
+        <div class="my-6 text-bronze/50 text-2xl">↓</div>
+
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          <span class="pillar text-2xl sm:text-3xl text-ink">Love</span>
+          <span class="text-bronze/40 hidden sm:inline">·</span>
+          <span class="pillar text-2xl sm:text-3xl text-ink">Gratitude</span>
+          <span class="text-bronze/40 hidden sm:inline">·</span>
+          <span class="pillar text-2xl sm:text-3xl text-ink">Joy</span>
+        </div>
+
+        <div class="my-6 text-bronze/50 text-2xl">↑</div>
+
+        <p class="pillar text-2xl sm:text-3xl text-bronze">So Below</p>
+      </div>
+
+      <p class="mt-10 text-lg leading-relaxed text-muted max-w-2xl mx-auto pull italic">
+        Love, Gratitude &amp; Joy are not merely feelings — they are the living channel through which the light of the infinite flows to the soul, and the soul's light flows back. When the channel is open, blockages clear. When blockages clear, the life the soul came here to live becomes possible.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── The Questions ─────────────────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-2xl mx-auto px-6 lg:px-10">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        The questions <span class="italic text-bronze">beneath the work</span>
+      </h2>
+
+      <div class="mt-8 space-y-5 text-lg leading-relaxed text-ink">
+        <p>Every person arrives with a goal, a challenge, or a blockage they wish to clear.</p>
+        <p>And while every journey is unique, two questions quietly guide the work:</p>
+      </div>
+
+      <figure class="my-12">
+        <blockquote class="pull italic text-2xl sm:text-3xl text-bronze leading-snug text-center max-w-xl mx-auto">
+          What is being asked of me?<br/>
+          How can I become useful to the Light?
+        </blockquote>
+      </figure>
+
+      <div class="space-y-5 text-lg leading-relaxed text-ink">
+        <p>These are not questions to be answered immediately. They are <em>invitations.</em> As the blockages clear, the answers reveal themselves — sometimes through insight, sometimes through action, sometimes through service.</p>
+        <p class="text-muted">
+          The goal is not simply to remove a blockage. The goal is to become more available to the life your soul came here to live.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── How It Works / Anatomy of a Miracle ───────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <div class="text-center">
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+          How it works
+        </h2>
+      </div>
+
+      <div class="mt-12 rounded-2xl border border-hairline px-8 sm:px-14 py-12 sm:py-14 text-center relative overflow-hidden"
+           style="background: linear-gradient(180deg, #FBF8F3 0%, #F8F1E4 100%);">
+        <div class="absolute inset-x-0 top-0 h-px"
+             style="background: linear-gradient(90deg, transparent, #C28A4A, transparent);"></div>
+
+        <p class="font-serif italic text-bronze text-base sm:text-lg tracking-wide mb-4">The Anatomy of a Miracle</p>
+        <h3 class="font-serif text-2xl sm:text-3xl text-ink leading-snug max-w-xl mx-auto">
+          Real transformation follows <span class="italic text-bronze">a specific order.</span>
+        </h3>
+
+        <p class="mt-6 text-lg leading-relaxed text-ink max-w-xl mx-auto">
+          Each session works through one of <span class="font-medium">8 carefully structured frameworks</span> — the Anatomy of a Miracle — using the tools of the Compassion Key to clear blockages at every level.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-2.5 max-w-xl mx-auto">
+          <span class="tag">Internal Clearing</span>
+          <span class="tag">Root Causes</span>
+          <span class="tag">Effects</span>
+          <span class="tag">Externalization</span>
+          <span class="tag">Synchronicities</span>
+          <span class="tag">Making Space</span>
+        </div>
+
+        <p class="mt-10 pt-8 border-t border-hairline text-sm sm:text-base text-muted italic leading-relaxed max-w-xl mx-auto pull">
+          Most clients complete their full clearing in <span class="not-italic font-medium text-ink">8–10 sessions.</span> Some meet their goal in as few as two. Follow-up sessions are available to keep the channel clear and the light flowing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── The Influences (Lineage) ──────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <div class="mb-12">
+        <span class="accent-rule"></span>
+        <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+          The <span class="italic text-bronze">influences</span>
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted max-w-xl">
+          An unbroken thread — teachers who studied what opens the inner channel, and what keeps it closed.
+        </p>
+      </div>
+
+      <ol class="lineage relative pl-0 space-y-6">
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">⚡</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">The Prophet Elijah</p>
+            <p class="text-muted italic pull">The source of the flame — the eternal channel.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">✡</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">The Ari — Rabbi Isaac Luria</p>
+            <p class="text-muted italic pull">Father of Lurianic Kabbalah — revealer of the hidden light.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">📜</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">Rav Yehuda Ashlag — The Baal HaSulam</p>
+            <p class="text-muted italic pull">Brought the wisdom of the light to the world.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">🕯️</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">Rav Brandwein</p>
+            <p class="text-muted italic pull">Servant of the light — keeper and transmitter of the sacred lineage.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">✨</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">The Rav &amp; Karen Berg</p>
+            <p class="text-muted italic pull">Opened the gates — brought the light to every soul.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">🌟</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">Abigail</p>
+            <p class="text-muted italic pull">His mentor — she taught him to channel safely, to hold the light without being consumed.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node">🗝️</span>
+          <div class="pt-2">
+            <p class="font-serif text-xl text-ink">Edward Mannix</p>
+            <p class="text-muted italic pull">Founder of the Compassion Key — teacher of the tools that clear the path to the light.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start gap-5">
+          <span class="l-node is-sam">🔥</span>
+          <div class="pt-2.5">
+            <p class="font-serif text-2xl text-bronze font-medium">Samuel Spade</p>
+            <p class="text-muted italic pull">Servant of the Light · Channel for Love, Gratitude &amp; Joy.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─── Who This Is For ───────────────────────────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-2xl mx-auto px-6 lg:px-10">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        Who this work <span class="italic text-bronze">is for</span>
+      </h2>
+
+      <div class="mt-8 space-y-5 text-lg leading-relaxed text-ink">
+        <p>This work is for anyone who feels something is holding them back from what they know is possible.</p>
+        <p>For the individual seeking clarity, healing, or a deeper connection to their purpose.</p>
+        <p>For the <span class="font-medium text-bronze">business owner, investor, or entrepreneur</span> who senses that the real obstacles aren't external — that the blockages affecting their decisions, their vision, and their results run deeper than strategy alone.</p>
+        <p class="font-serif text-2xl italic text-ink pt-4 leading-snug">
+          When the inner channel is clear, <span class="text-bronze">outer results follow.</span>
+        </p>
+      </div>
+
+      <figure class="mt-12 pt-12 border-t border-hairline">
+        <blockquote class="pull italic text-2xl sm:text-3xl text-bronze leading-snug text-center">
+          “As above, so below.”
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ─── Final CTA ─────────────────────────────────────────── -->
+  <section class="py-24 sm:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10"
+         style="background:
+           radial-gradient(ellipse 70% 50% at 50% 50%, rgba(194, 138, 74, 0.20), transparent 70%),
+           #FBF8F3;"></div>
+
+    <div class="max-w-2xl mx-auto px-6 lg:px-10 text-center">
+      <p class="font-serif italic text-bronze text-lg mb-4">The light is already moving toward you.</p>
+      <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-ink">
+        Take the <span class="italic text-bronze">first step.</span>
+      </h2>
+      <p class="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-md mx-auto">
+        Soul Strategy Sessions are held one-on-one over a private call.
+      </p>
+      <div class="mt-10">
+        <a href="index.html#book"
+           class="cta-bronze inline-flex items-center justify-center px-8 py-4 rounded-2xl text-base font-medium tracking-wide">
+          Book a Soul Strategy Session
+        </a>
+        <p class="mt-4 text-sm text-muted">
+          <span class="font-serif text-base text-ink">$42.72</span> &middot; Soul Strategy Session
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="border-t border-hairline py-10">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-baseline gap-5 sm:gap-9">
+        <a href="index.html" class="font-serif text-base text-ink hover:text-bronze transition-colors">Sam Spade</a>
+        <span class="font-serif italic text-base text-muted">Abigail's Light</span>
+      </div>
+      <div class="flex items-center gap-6 text-sm text-muted">
+        <a href="mailto:hello@samspade.example" class="hover:text-bronze transition-colors">hello@samspade.example</a>
+        <span>© <script>document.write(new Date().getFullYear())</script></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

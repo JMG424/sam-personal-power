@@ -124,6 +124,20 @@
       margin-top: 0.7rem;
       background: #C28A4A;
     }
+
+    /* Cormorant italic for pull-quotes and editorial flourishes */
+    .pull {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+    }
+
+    /* Quadrant rail accent */
+    .quadrant {
+      transition: border-color 220ms ease;
+    }
+    .quadrant:hover {
+      border-color: #C28A4A;
+    }
   </style>
 </head>
 
@@ -266,82 +280,177 @@
   <!-- ─── Reserved hook for intake/reflection (Phase 2) ─────── -->
   <!-- <section id="reflect"></section> -->
 
-  <!-- ─── The Stage Map ─────────────────────────────────────── -->
-  <section class="py-20 sm:py-28">
+  <!-- ─── The Anatomy of a Miracle Map ──────────────────────── -->
+  <section id="map" class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-6 lg:px-10">
-      <div class="max-w-3xl mb-12">
+
+      <div class="max-w-3xl mb-14">
         <span class="accent-rule"></span>
         <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
-          A simple map of the work
+          The Anatomy of a <span class="italic text-bronze">Miracle Map</span>
         </h2>
         <p class="mt-6 text-lg leading-relaxed text-muted">
-          The work moves through four stages. Most people recognize themselves in one of them the moment they read it. The map isn't a label — it's an orientation.
+          Sam's work follows a simple but powerful map: first we clear the internal pattern, then we support the external miracle as it begins to take form. This isn't about labeling you. It's about helping you see what has been running underneath the surface — and what your life is asking you to make room for next.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-        <!-- Stage 1 -->
-        <article id="stage-block" class="stage-card rounded-2xl p-7">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="stage-num">01</span>
-            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
-          </div>
-          <h3 class="font-serif text-2xl text-ink mb-3">The Block</h3>
-          <p class="text-sm text-muted leading-relaxed mb-4">
-            Where the pattern becomes visible — the place you keep circling, even when you know better.
-          </p>
-          <p class="text-sm text-ink leading-relaxed">
-            <span class="text-bronze font-medium">What helps now:</span> seeing it clearly, without judgment.
-          </p>
-        </article>
+      <!-- Two-arc framework -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
-        <!-- Stage 2 -->
-        <article id="stage-clearing" class="stage-card rounded-2xl p-7">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="stage-num">02</span>
-            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
-          </div>
-          <h3 class="font-serif text-2xl text-ink mb-3">The Clearing</h3>
-          <p class="text-sm text-muted leading-relaxed mb-4">
-            Where the root cause and the emotional charge underneath it begin to release.
-          </p>
-          <p class="text-sm text-ink leading-relaxed">
-            <span class="text-bronze font-medium">What helps now:</span> presence, not pressure.
-          </p>
-        </article>
+        <!-- Arc 1: Internal Clearing -->
+        <div class="rounded-2xl border border-hairline p-8 sm:p-10 relative overflow-hidden"
+             style="background: linear-gradient(180deg, #FBF8F3 0%, #F8F1E4 100%);">
+          <div class="absolute inset-x-0 top-0 h-px"
+               style="background: linear-gradient(90deg, transparent, #C28A4A, transparent);"></div>
+          <p class="text-[10px] sm:text-xs tracking-[0.32em] uppercase text-bronze font-medium mb-3">Arc 1</p>
+          <h3 class="font-serif text-2xl sm:text-3xl text-ink leading-tight">Internal Clearing</h3>
+          <p class="mt-3 text-sm italic text-muted pull">Understanding and clearing what blocks the goal.</p>
 
-        <!-- Stage 3 -->
-        <article id="stage-reconnection" class="stage-card rounded-2xl p-7">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="stage-num">03</span>
-            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+          <div class="mt-8 space-y-7">
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Causes</p>
+              <p class="text-sm leading-relaxed text-muted">
+                We look underneath the pattern to find what has been quietly creating or maintaining it — the belief, wound, falsehood, or emotional charge that keeps the goal out of reach.
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Effects</p>
+              <p class="text-sm leading-relaxed text-muted">
+                We name how that hidden cause has been showing up in real life: in choices, relationships, money, health, visibility, timing, or follow-through.
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Who Would I Be?</p>
+              <p class="text-sm leading-relaxed text-muted">
+                We explore both sides of receiving the miracle: the part of you that is ready to become someone new, and the part that may fear what changes if the desire actually arrives.
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Meta Theme</p>
+              <p class="text-sm leading-relaxed text-muted">
+                We identify the deeper theme tying the pattern together, so the work isn't just about one symptom — it becomes a clearer soul-level lesson.
+              </p>
+            </div>
           </div>
-          <h3 class="font-serif text-2xl text-ink mb-3">The Reconnection</h3>
-          <p class="text-sm text-muted leading-relaxed mb-4">
-            Where your inner knowing returns — and the next step starts to feel obvious.
-          </p>
-          <p class="text-sm text-ink leading-relaxed">
-            <span class="text-bronze font-medium">What helps now:</span> trusting what you're hearing.
-          </p>
-        </article>
+        </div>
 
-        <!-- Stage 4 -->
-        <article id="stage-embodiment" class="stage-card rounded-2xl p-7">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="stage-num">04</span>
-            <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+        <!-- Arc 2: Externalization -->
+        <div class="rounded-2xl border border-hairline p-8 sm:p-10 relative overflow-hidden"
+             style="background: linear-gradient(180deg, #F8F1E4 0%, #FBF8F3 100%);">
+          <div class="absolute inset-x-0 top-0 h-px"
+               style="background: linear-gradient(90deg, transparent, #C28A4A, transparent);"></div>
+          <p class="text-[10px] sm:text-xs tracking-[0.32em] uppercase text-bronze font-medium mb-3">Arc 2</p>
+          <h3 class="font-serif text-2xl sm:text-3xl text-ink leading-tight">Externalization</h3>
+          <p class="mt-3 text-sm italic text-muted pull">Making the goal real in your life.</p>
+
+          <div class="mt-8 space-y-7">
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Synchronicities</p>
+              <p class="text-sm leading-relaxed text-muted">
+                As the internal pattern clears, you may begin noticing openings, signs, people, timing, and confirmations that weren't visible before.
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Actions</p>
+              <p class="text-sm leading-relaxed text-muted">
+                The work comes back to grounded action: what is the next honest step you can actually take from this clearer place?
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Making Space</p>
+              <p class="text-sm leading-relaxed text-muted">
+                We look at what your life must make room for — in your schedule, environment, relationships, boundaries, systems, and structure — so the miracle has somewhere to land.
+              </p>
+            </div>
+            <div class="quadrant border-l-2 border-hairline pl-5">
+              <p class="font-serif text-xl text-ink mb-2">Obstacles to Externalization</p>
+              <p class="text-sm leading-relaxed text-muted">
+                When the desire gets closer, new resistance may appear. Doubt, logistics, sabotage, or <span class="italic">"this is too good to be true"</span> thoughts are treated as the next layer to clear — not as failure.
+              </p>
+            </div>
           </div>
-          <h3 class="font-serif text-2xl text-ink mb-3">The Embodiment</h3>
-          <p class="text-sm text-muted leading-relaxed mb-4">
-            Where aligned action and follow-through become available — and the goal moves into form.
-          </p>
-          <p class="text-sm text-ink leading-relaxed">
-            <span class="text-bronze font-medium">What helps now:</span> showing up, one grounded step at a time.
-          </p>
-        </article>
+        </div>
+
       </div>
 
-      <p class="mt-8 text-sm italic text-muted">Working names — Sam may refine these.</p>
+      <!-- The journey through this map -->
+      <div class="mt-16 sm:mt-20">
+        <div class="max-w-3xl mb-10">
+          <span class="accent-rule"></span>
+          <h3 class="mt-4 font-serif text-2xl sm:text-3xl text-ink leading-tight">
+            The journey through this map
+          </h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">
+            As you move through the work, you'll recognize yourself in four stages. Each one rests on a different part of the map.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
+          <article id="stage-block" class="stage-card rounded-2xl p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <span class="stage-num">01</span>
+              <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+            </div>
+            <h4 class="font-serif text-xl text-ink mb-2">The Block</h4>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Where the pattern becomes visible — the place you keep circling, even when you know better.
+            </p>
+            <div class="pt-4 border-t border-hairline">
+              <p class="text-[10px] tracking-[0.22em] uppercase text-bronze mb-1.5">On the map</p>
+              <p class="text-sm italic text-ink pull">Causes + Effects</p>
+            </div>
+          </article>
+
+          <article id="stage-clearing" class="stage-card rounded-2xl p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <span class="stage-num">02</span>
+              <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+            </div>
+            <h4 class="font-serif text-xl text-ink mb-2">The Clearing</h4>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Where the root cause and the emotional charge underneath it begin to release.
+            </p>
+            <div class="pt-4 border-t border-hairline">
+              <p class="text-[10px] tracking-[0.22em] uppercase text-bronze mb-1.5">On the map</p>
+              <p class="text-sm italic text-ink pull">Causes + Meta Theme</p>
+            </div>
+          </article>
+
+          <article id="stage-reconnection" class="stage-card rounded-2xl p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <span class="stage-num">03</span>
+              <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+            </div>
+            <h4 class="font-serif text-xl text-ink mb-2">The Reconnection</h4>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Where your inner knowing returns — and the next step starts to feel obvious.
+            </p>
+            <div class="pt-4 border-t border-hairline">
+              <p class="text-[10px] tracking-[0.22em] uppercase text-bronze mb-1.5">On the map</p>
+              <p class="text-sm italic text-ink pull">Who Would I Be? + Synchronicities</p>
+            </div>
+          </article>
+
+          <article id="stage-embodiment" class="stage-card rounded-2xl p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <span class="stage-num">04</span>
+              <span class="text-[10px] tracking-[0.18em] uppercase text-muted">Stage</span>
+            </div>
+            <h4 class="font-serif text-xl text-ink mb-2">The Embodiment</h4>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Where aligned action and follow-through become available — and the goal moves into form.
+            </p>
+            <div class="pt-4 border-t border-hairline">
+              <p class="text-[10px] tracking-[0.22em] uppercase text-bronze mb-1.5">On the map</p>
+              <p class="text-sm italic text-ink pull">Actions + Making Space + Obstacles</p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="mt-8 text-sm italic text-muted">Working names — Sam may refine these.</p>
+      </div>
     </div>
   </section>
 
@@ -406,13 +515,40 @@
         </h2>
         <ul class="mt-8 space-y-4 text-lg leading-relaxed">
           <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>You may feel tired or want quiet — that's the work integrating.</span></li>
-          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>New insights often arrive in the hours and days after.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>New insights may arrive later — in hours, days, sometimes weeks.</span></li>
           <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Old patterns become easier to notice and choose differently around.</span></li>
-          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Many people feel lighter or more spacious.</span></li>
-          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Rest, water, grounding, journaling, or a walk all help.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>You may feel lighter, more spacious, or temporarily unsettled as things reorganize.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Rest, water, grounding, journaling, and gentle movement all help.</span></li>
+          <li class="flex items-start gap-4"><span class="bullet-dot"></span><span>Don't force major conclusions immediately after a deep session.</span></li>
         </ul>
+
+        <div class="mt-8 pt-6 border-t border-hairline">
+          <p class="text-[10px] sm:text-xs tracking-[0.32em] uppercase text-bronze mb-2 font-medium">Integration guide</p>
+          <p class="text-base italic text-muted leading-relaxed pull">
+            After each session, your reflection can be organized through the Anatomy of a Miracle map — your current focus, what was cleared internally, what signs are appearing externally, what to watch for, and the next grounded action.
+          </p>
+        </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ─── When the miracle starts to feel real ──────────────── -->
+  <section class="bg-sand py-20 sm:py-28 border-y border-hairline">
+    <div class="max-w-2xl mx-auto px-6 lg:px-10 text-center">
+      <span class="accent-rule"></span>
+      <h2 class="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ink">
+        When the miracle <span class="italic text-bronze">starts to feel real</span>
+      </h2>
+      <p class="mt-8 text-lg leading-relaxed text-ink">
+        Sometimes the most important clearing happens <em class="italic text-bronze not-italic font-medium">after</em> the desire begins to appear. A client may receive exactly what they asked for and then feel,
+      </p>
+      <p class="mt-6 font-serif italic text-2xl sm:text-3xl text-bronze pull leading-snug">
+        "This is too good to be true."
+      </p>
+      <p class="mt-8 text-lg leading-relaxed text-muted max-w-xl mx-auto">
+        In Sam's work, that reaction isn't a problem. It's information. It shows the next falsehood ready to be cleared — so the good can be received with <span class="font-medium text-ink">love, gratitude, and joy.</span>
+      </p>
     </div>
   </section>
 

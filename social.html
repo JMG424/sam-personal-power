@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Posts v1 — Sam Spade</title>
+  <meta name="description" content="Ten ready-to-shoot social posts for Sam Spade — Instagram, TikTok, YouTube. Built to lower resistance and build desire." />
+  <meta name="robots" content="noindex" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@13.0.2/marked.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#FBF8F3',
+            sand: '#F3EEE5',
+            ink: '#2A2723',
+            muted: '#6B635A',
+            hairline: '#E6DFD3',
+            bronze: { DEFAULT: '#8B5A2B', light: '#C28A4A' },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #FBF8F3; color: #2A2723; font-family: 'Inter', sans-serif; }
+
+    .cta-bronze {
+      background: linear-gradient(135deg, #8B5A2B 0%, #C28A4A 100%);
+      color: #FBF8F3;
+      box-shadow: 0 1px 2px rgba(42, 39, 35, 0.08), 0 8px 24px -8px rgba(139, 90, 43, 0.35);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .cta-bronze:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(42, 39, 35, 0.1), 0 14px 32px -10px rgba(139, 90, 43, 0.45);
+    }
+
+    .accent-rule {
+      display: inline-block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #8B5A2B, #C28A4A);
+      border-radius: 999px;
+    }
+
+    /* Rendered markdown styles */
+    #md h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.1;
+      color: #2A2723;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+    #md h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.2;
+      color: #2A2723;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #E6DFD3;
+      font-weight: 500;
+    }
+    #md h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.5rem; }
+    #md h2 strong { color: #8B5A2B; font-weight: 500; }
+    #md h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      color: #2A2723;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    #md p {
+      margin-bottom: 1rem;
+      line-height: 1.75;
+      color: #2A2723;
+    }
+    #md ul, #md ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      line-height: 1.75;
+    }
+    #md ul li { list-style: disc; margin-bottom: 0.4rem; color: #2A2723; }
+    #md ol li { list-style: decimal; margin-bottom: 0.4rem; color: #2A2723; }
+    #md ul li::marker, #md ol li::marker { color: #C28A4A; }
+    #md strong { color: #8B5A2B; font-weight: 500; }
+    #md em { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.08em; color: #6B635A; }
+    #md a { color: #8B5A2B; text-decoration: underline; text-underline-offset: 3px; }
+    #md a:hover { color: #C28A4A; }
+    #md hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #C28A4A, transparent);
+      margin: 3rem 0;
+    }
+    #md blockquote {
+      border-left: 3px solid #C28A4A;
+      padding: 0.5rem 1.25rem;
+      margin: 1.5rem 0;
+      background: rgba(194, 138, 74, 0.04);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      color: #2A2723;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    #md blockquote p { margin: 0.25rem 0; }
+    #md code {
+      background: #F3EEE5;
+      border: 1px solid #E6DFD3;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.92em;
+      color: #8B5A2B;
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+    }
+    #md pre {
+      background: #F3EEE5;
+      border: 1px solid #E6DFD3;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    #md pre code {
+      background: transparent;
+      border: none;
+      padding: 0;
+      color: #2A2723;
+    }
+    #md table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.9rem;
+    }
+    #md table th, #md table td {
+      padding: 0.7rem 0.9rem;
+      border: 1px solid #E6DFD3;
+      text-align: left;
+      vertical-align: top;
+    }
+    #md table th {
+      background: #F3EEE5;
+      color: #8B5A2B;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    #md table tr:nth-child(even) td { background: rgba(243, 238, 229, 0.4); }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-ink">
+
+  <!-- Nav -->
+  <header class="absolute top-0 left-0 right-0 z-20">
+    <nav class="max-w-4xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+      <a href="index.html" class="font-serif text-xl tracking-wide text-ink inline-flex items-center gap-2 hover:text-bronze transition-colors">
+        <span class="text-bronze">←</span> Sam Spade
+      </a>
+      <a href="social-posts-v1.md"
+         download
+         class="hidden sm:inline-flex items-center text-sm font-medium text-ink hover:text-bronze transition-colors">
+        Download .md
+        <span class="ml-1.5">↓</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-12 sm:pt-40 sm:pb-16"
+           style="background: radial-gradient(ellipse 65% 50% at 50% 0%, rgba(194,138,74,0.18), transparent 70%), #FBF8F3;">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <span class="accent-rule"></span>
+      <p class="mt-4 text-xs sm:text-sm tracking-[0.28em] uppercase text-bronze mb-4 font-medium">Internal · v1</p>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-ink">
+        Social Posts <span class="italic text-bronze">v1</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-muted leading-relaxed pull" style="font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;">
+        Ten ready-to-shoot posts for Instagram, TikTok, and YouTube — built to lower resistance and build desire in Sam's audience.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="social-posts-v1.md" download
+           class="cta-bronze inline-flex items-center justify-center px-6 py-3 rounded-2xl text-sm font-medium tracking-wide">
+          Download as .md
+          <span class="ml-1.5">↓</span>
+        </a>
+        <a href="https://github.com/JMG424/sam-personal-power/blob/main/social-posts-v1.md" target="_blank" rel="noopener"
+           class="inline-flex items-center text-sm font-medium text-ink hover:text-bronze transition-colors">
+          View on GitHub
+          <span class="ml-1.5">↗</span>
+        </a>
+        <a href="index.html"
+           class="inline-flex items-center text-sm font-medium text-ink hover:text-bronze transition-colors">
+          Back to the site
+          <span class="ml-1.5">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markdown content -->
+  <main class="pb-24">
+    <article id="md" class="max-w-3xl mx-auto px-6 lg:px-10">
+      <p class="text-muted italic" style="font-family: 'Cormorant Garamond', Georgia, serif;">Loading the deck…</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-hairline py-10">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-base text-ink">Sam Spade · Social Posts v1</p>
+      <div class="flex items-center gap-6 text-sm text-muted">
+        <a href="social-posts-v1.md" download class="hover:text-bronze transition-colors">Download .md</a>
+        <a href="index.html" class="hover:text-bronze transition-colors">Site</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (async () => {
+      try {
+        const resp = await fetch('social-posts-v1.md', { cache: 'no-cache' });
+        if (!resp.ok) throw new Error('Could not load the file');
+        const md = await resp.text();
+        document.getElementById('md').innerHTML = marked.parse(md, { gfm: true, breaks: false });
+      } catch (err) {
+        document.getElementById('md').innerHTML =
+          '<p style="color:#8B5A2B">Could not load the file. <a href="social-posts-v1.md" download>Download it directly</a>.</p>';
+      }
+    })();
+  </script>
+
+</body>
+</html>
